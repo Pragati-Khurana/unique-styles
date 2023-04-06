@@ -1,5 +1,4 @@
 import React, {useContext, useState, useEffect, Fragment} from 'react'
-import { CategoriesContext } from '../../contexts/categories.context'
 import { useParams } from 'react-router-dom';
 import ProductCard from '../../components/product-card/product-card.component';
 import './category.styles.scss';

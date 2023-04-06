@@ -42,8 +42,6 @@ const INITIAL_STATE = {
 
 const cartReducer = (state, action) => {
     const {type, payload} = action;
-    console.log(payload);
-    console.log(state);
     switch(type) {
         case 'SET_IS_CART_OPEN':
             return {
@@ -61,10 +59,6 @@ const cartReducer = (state, action) => {
 }
 
 export const CartProvider = ({children}) => {
-    // const [isCartOpen, setIsCartOpen] = useState(false);
-    // const [cartItems, setCartItems] = useState([]);
-    // const [countItems, setCountItems] = useState(0);
-    // const [countTotal, setCountTotal] = useState(0);
 
     const [state, dispatch] = useReducer(cartReducer, INITIAL_STATE);
     const { isCartOpen, cartItems, countItems, countTotal} = state;

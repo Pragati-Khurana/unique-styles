@@ -9,10 +9,12 @@ import { CartContext } from '../../contexts/cart.context';
 import { NavigationContainer, LogoContainer, NavLinks, NavLink } from './navigation.styles';
 import { useSelector } from 'react-redux';
 import { selectCurrentUser } from '../../Store/User/User.selector';
+import { selectIsCartOpen } from '../../Store/Cart/Cart.selector';
 
 const Navigation = () => {
     const currentUser = useSelector(selectCurrentUser);
-    const {isCartOpen} = useContext(CartContext);
+    // const {isCartOpen} = useContext(CartContext);
+    const isCartOpen = useSelector(selectIsCartOpen);
 
     return (
       <Fragment>
